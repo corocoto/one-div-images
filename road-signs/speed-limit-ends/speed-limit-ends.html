@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Speed limit ends | Road sign</title>
+    <style>
+        div{
+            position: relative;
+            width: 160px;
+            height: 160px;
+            border: 2px solid black;
+            border-radius: 50%;
+            background-color: white;
+            color: grey;
+            font-size: 80px;
+            font-family: sans-serif;
+            font-weight: 700;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 0 2px #fff, 0 0 0 3px #000;
+        }
+        div:before{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 9px;
+            background-color: transparent;
+            border-top: 3px solid black;
+            border-bottom: 3px solid black;
+            transform: rotate(-45deg);
+        }
+        div:after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background-color: black;
+            transform: rotate(-45deg);
+        }
+    </style>
+</head>
+<body>
+    <div>50</div>
+</body>
+</html>
