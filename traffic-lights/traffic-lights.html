@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Traffic lights</title>
+    <style>
+        :root{
+            --size: 60px;
+        }
+
+        .traffic_lights{
+            display: flex;
+            justify-content: center;
+        }
+
+        .traffic_lights div:not(:last-child){
+            margin-right: 40px;
+        }
+
+        .traffic_lights__red,
+        .traffic_lights__yellow,
+        .traffic_lights__green{
+            position: relative;
+            width: 100px;
+            height: 240px;
+            background-color: black;
+            border-radius: 8px;
+        }
+
+        .traffic_lights__red::before,
+        .traffic_lights__yellow::before,
+        .traffic_lights__green::before {
+            position: absolute;
+            width: var(--size);
+            height: var(--size);
+            border-radius: 50%;
+            content: '';
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .traffic_lights__red::before{
+            background-color: red;
+            top: 10px;
+            box-shadow: 0 calc(var(--size) * 1.3) 0 0 #7f7f7f, 0 calc(var(--size) * 2.6) 0 0 #7f7f7f;
+        }
+
+        .traffic_lights__yellow::before{
+            background-color: yellow;
+            top: calc(10px + var(--size) * 1.3);
+            box-shadow: 0 calc(var(--size) * -1.3) 0 0 #7f7f7f,0 calc(var(--size) * 1.3) 0 0 #7f7f7f;
+        }
+
+        .traffic_lights__green::before{
+            background-color: green;
+            top: calc(10px + var(--size) * 2.6);
+            box-shadow: 0 calc(var(--size) * -1.3) 0 0 #7f7f7f,0 calc(var(--size) * -2.6) 0 0 #7f7f7f;
+        }
+    </style>
+</head>
+<body>
+<div class="traffic_lights">
+    <div class="traffic_lights__red"></div>
+    <div class="traffic_lights__yellow"></div>
+    <div class="traffic_lights__green"></div>
+</div>
+</body>
+</html>
