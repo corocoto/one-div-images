@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Yandex Map Logo</title>
+    <style>
+        :root{
+            --rect-size: 34px;
+            --triangle-height: 8px;
+            --yellow-color: #fc0;
+            --red-color: #f00;
+            --white-color: #fff;
+        }
+
+        div{
+            width: var(--rect-size);
+            height: var(--rect-size);
+            background: radial-gradient(circle at center 13px, var(--red-color) 0 3px,var(--white-color) 3px 8px, transparent 8px),
+            linear-gradient(124deg, transparent 50%, var(--yellow-color) 50%) 95% / 54% no-repeat,
+            linear-gradient(99deg, transparent 50%, var(--red-color) 50%) 47% 73% / 39% 56% no-repeat,
+            linear-gradient(var(--yellow-color), var(--yellow-color));
+            position: relative;
+        }
+
+        div::after{
+            content: '';
+            display: inline-block;
+            border-bottom: calc(var(--rect-size) / 2) solid var(--white-color);
+            border-left: var(--triangle-height) solid var(--yellow-color);
+            border-top: calc(var(--rect-size) / 2) solid var(--white-color);
+            transform: translate(var(--rect-size));
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
